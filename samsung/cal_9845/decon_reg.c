@@ -875,8 +875,8 @@ static void dsc_calc_pps_info(struct decon_config *config, u32 dscc_en,
 	u32 slice_width_byte_unit, comp_slice_width_byte_unit;
 	u32 comp_slice_width_pixel_unit;
 	u32 overlap_w = 0;
-	u32 dsc_enc0_w = 0, dsc_enc0_h;
-	u32 dsc_enc1_w = 0, dsc_enc1_h;
+	u32 dsc_enc0_w = 0, __maybe_unused dsc_enc0_h;
+	u32 dsc_enc1_w = 0, __maybe_unused dsc_enc1_h;
 	u32 i, j;
 
 	width = config->image_width;

@@ -1122,8 +1122,8 @@ static void dsim_reg_set_multi_slice(u32 id, struct dsim_reg_config *config)
 static void dsim_reg_set_size_of_slice(u32 id, struct dsim_reg_config *config)
 {
 	u32 slice_w = config->dsc.slice_width;
-	u32 val_01 = 0, mask_01 = 0;
-	u32 val_23 = 0, mask_23 = 0;
+	u32 val_01 = 0, __maybe_unused mask_01 = 0;
+	u32 val_23 = 0, __maybe_unused mask_23 = 0;
 
 	if (config->dsc.slice_count == 4) {
 		val_01 = DSIM_SLICE01_SIZE_OF_SLICE1(slice_w) |

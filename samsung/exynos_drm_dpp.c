@@ -1029,7 +1029,7 @@ fail:
 static irqreturn_t dpp_irq_handler(int irq, void *priv)
 {
 	struct dpp_device *dpp = priv;
-	u32 dpp_irq = 0;
+	u32 __maybe_unused dpp_irq = 0;
 
 	spin_lock(&dpp->slock);
 	if (dpp->state == DPP_STATE_OFF)
